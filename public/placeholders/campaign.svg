@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="550" fill="none" viewBox="0 0 880 550">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="120%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <linearGradient id="moon" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fdf4ff" />
+      <stop offset="100%" stop-color="#fce7f3" />
+    </linearGradient>
+  </defs>
+  <rect width="880" height="550" rx="42" fill="url(#g3)" />
+  <ellipse cx="140" cy="420" rx="170" ry="48" fill="#ffffff" opacity="0.4" />
+  <rect x="120" y="150" width="640" height="240" rx="30" fill="url(#moon)" opacity="0.93" stroke="#ffffff66" />
+  <rect x="520" y="96" width="220" height="120" rx="24" fill="#fdf2f8cc" stroke="#fbcfe8" />
+  <text x="150" y="420" fill="#0f172a" opacity="0.35" font-size="112" font-family="system-ui" font-weight="700">
+    HERO
+  </text>
+</svg>

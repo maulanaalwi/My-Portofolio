@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" fill="none" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="72" ry="72" />
+  <text x="80" y="240" fill="white" font-size="64" font-family="Plus Jakarta Sans, system-ui" font-weight="700">
+    Portfolio
+  </text>
+  <text x="82" y="330" fill="rgba(255,255,255,0.92)" font-size="36" font-family="Plus Jakarta Sans, system-ui">
+    Frontend Web Developer · Vue + Tailwind
+  </text>
+</svg>

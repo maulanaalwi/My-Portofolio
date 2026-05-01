@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-surface-dark: oklch(0.165 0.02 272);
+  --color-surface-darker: oklch(0.138 0.022 272);
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen antialiased bg-slate-50 text-slate-800 dark:bg-[var(--color-surface-dark)] dark:text-slate-200;
+}
