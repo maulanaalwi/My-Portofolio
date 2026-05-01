@@ -12,7 +12,7 @@ export const profile = {
       download: true,
     },
     imageAlt: 'Foto profil',
-    avatarUrl: 'src/assets/Profil-Gua.jpg',
+    avatarUrl: '/Profil-Gua.jpg',
   },
   about: {
     eyebrow: 'Tentang saya',

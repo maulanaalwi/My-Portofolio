@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowRight, DownloadCloud } from 'lucide-vue-next'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import AppButton from '@/components/ui/AppButton.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
 import { profile } from '@/content/profile'
@@ -19,6 +19,16 @@ const initials = computed(() =>
 )
 
 const avatarSrc = computed(() => hero.avatarUrl.trim())
+const avatarLoadFailed = ref(false)
+const showAvatarImage = computed(() => avatarSrc.value.length > 0 && !avatarLoadFailed.value)
+
+watch(avatarSrc, () => {
+  avatarLoadFailed.value = false
+})
+
+const onAvatarError = () => {
+  avatarLoadFailed.value = true
+}
 </script>
 
 <template>
@@ -88,7 +98,7 @@ const avatarSrc = computed(() => hero.avatarUrl.trim())
         >
           <div class="relative h-full w-full overflow-hidden rounded-[1.875rem] bg-slate-50 dark:bg-[#101025]">
             <img
-              v-if="avatarSrc.length > 0"
+              v-if="showAvatarImage"
               :src="avatarSrc"
               :alt="hero.imageAlt"
               class="h-full w-full object-cover object-top"
@@ -96,6 +106,7 @@ const avatarSrc = computed(() => hero.avatarUrl.trim())
               fetchpriority="high"
               width="640"
               height="800"
+              @error="onAvatarError"
             />
             <div
               v-else
@@ -108,12 +119,6 @@ const avatarSrc = computed(() => hero.avatarUrl.trim())
               >
                 {{ initials }}
               </div>
-              <p class="text-sm text-slate-600 dark:text-slate-400">
-                Ganti `avatarUrl` di
-                <code class="rounded bg-white/70 px-1 py-px text-xs dark:bg-slate-900/70">profile.ts</code>
-                atau simpan foto di folder
-                <code class="rounded bg-white/70 px-1 py-px text-xs dark:bg-slate-900/70">public/</code>.
-              </p>
             </div>
           </div>
         </div>
