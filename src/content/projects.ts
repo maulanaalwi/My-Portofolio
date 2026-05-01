@@ -10,6 +10,7 @@ export interface ProjectItem {
 export const projectsSection = {
   eyebrow: 'Portfolio',
   title: 'Proyek pilihan',
+  subtitle: 'Kumpulan proyek web yang pernah saya rancang dan kembangkan.',
 } as const
 
 export const projects: readonly ProjectItem[] = [

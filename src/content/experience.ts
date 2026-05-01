@@ -8,6 +8,7 @@ export interface ExperienceItem {
 export const experienceSection = {
   eyebrow: 'Perjalanan',
   title: 'Pengalaman kerja & magang',
+  subtitle: 'Perjalanan saya membangun produk digital lewat magang dan proyek nyata.',
 } as const
 
 export const experiences: readonly ExperienceItem[] = [

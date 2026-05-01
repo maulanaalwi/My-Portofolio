@@ -91,7 +91,7 @@ const avatarSrc = computed(() => hero.avatarUrl.trim())
               v-if="avatarSrc.length > 0"
               :src="avatarSrc"
               :alt="hero.imageAlt"
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover object-top"
               decoding="async"
               fetchpriority="high"
               width="640"
